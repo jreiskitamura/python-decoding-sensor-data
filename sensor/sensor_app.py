@@ -5,7 +5,7 @@ from datetime import date, datetime
 from temperature_info import TemperatureData
 from humidity_info import HumidityData
 from statistics import mean
-from particule_count_info import ParticleData
+from particle_count_info import ParticleData
 ##############################
 # Do not remove these two lines
 # They are needed to validate your unittest
@@ -55,7 +55,7 @@ print("\n Good Air Quality Recs: {}".format(concentrations["good"]))
 print("\n Moderate Air Quality Recs: {}".format(concentrations["moderate"]))
 print("\n Bad Air Quality Recs: {}".format(concentrations["bad"]))
 
-recs = particle_data.get_data_by_date(rec_area = test_date)
+recs = particle_data.get_data_by_date(rec_date = test_date)
 print("\n House Particle sensor records for date {} = {}".format(test_date.strftime("%m/%d/%y"), len(recs)))
 
 concentrations = particle_data.get_data_concentrations(data = recs)
